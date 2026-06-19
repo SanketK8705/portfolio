@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sanket Kumar Singh — Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@500;600&display=swap" rel="stylesheet" />
+    <style>
+      :root { --bg: #090a0a; --text: #f1f2ec; --muted: #969b96; --accent: #b8f05a; --line: rgba(255,255,255,.11); }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--bg); color: var(--text); font-family: "Manrope", sans-serif; }
+      .resume-bar {
+        position: fixed; z-index: 10; top: 0; left: 0; right: 0; height: 52px;
+        display: flex; align-items: center; justify-content: space-between;
+        padding: 0 20px; background: rgba(11,12,12,.92); border-bottom: 1px solid var(--line);
+        backdrop-filter: blur(16px);
+      }
+      .resume-bar a { color: var(--text); text-decoration: none; font-size: 14px; font-weight: 600; letter-spacing: -.04em; }
+      .resume-bar a span { color: var(--accent); }
+      .resume-bar nav { display: flex; gap: 18px; font: 400 11px/1 "DM Mono", monospace; text-transform: uppercase; letter-spacing: .08em; }
+      .resume-bar nav a { color: var(--muted); font-size: 11px; font-weight: 400; transition: color .2s; }
+      .resume-bar nav a:hover { color: var(--accent); }
+      .pdf-frame { position: fixed; top: 52px; left: 0; right: 0; bottom: 0; border: 0; width: 100%; height: calc(100% - 52px); background: #1a1a1a; }
+    </style>
+  </head>
+  <body>
+    <header class="resume-bar">
+      <a href="index.html">Sanket<span>.</span></a>
+      <nav>
+        <a href="index.html">← Back to portfolio</a>
+        <a href="assets/sanket-kumar-singh-resume.pdf" download>Download PDF</a>
+      </nav>
+    </header>
+    <iframe class="pdf-frame" src="assets/sanket-kumar-singh-resume.pdf" title="Sanket Kumar Singh Resume"></iframe>
+  </body>
+</html>
