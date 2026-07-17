@@ -122,21 +122,35 @@
       <section class="work section" id="work">
         <div class="section-heading reveal">
           <div><span class="eyebrow">02 / Selected work</span><h2>Built with intent.<br /><em>Engineered to work.</em></h2></div>
-          <p>Three projects across machine learning, cybersecurity and privacy-first product development.</p>
+          <p>Four projects across machine learning, cybersecurity, real-time microservices and carpooling platforms.</p>
         </div>
 
         <div class="projects">
           <article class="project-card project-featured reveal">
-            <div class="project-visual visual-fifa" aria-label="Abstract data visualization for FIFA Player Transfer Value Predictor">
-              <div class="visual-top"><span>FIFA / ML LAB</span><span>MODEL 03</span></div>
+            <div class="project-visual visual-fifa" aria-label="Abstract data visualization for FIFAVal">
+              <div class="visual-top"><span>FIFAVal / ML Platform</span><span>MODEL GB.01</span></div>
               <div class="football-map"><span class="player-dot p1"></span><span class="player-dot p2"></span><span class="player-dot p3"></span><span class="player-dot p4"></span><span class="player-dot p5"></span><span class="player-dot p6"></span><div class="field-circle"></div></div>
-              <div class="value-panel"><small>PREDICTED VALUE</small><strong>€84.5M</strong><div class="mini-bars"><i></i><i></i><i></i><i></i><i></i></div></div>
+              <div class="value-panel"><small>VALUATION ACCURACY</small><strong>99.17% R²</strong><div class="mini-bars"><i></i><i></i><i></i><i></i><i></i></div></div>
             </div>
             <div class="project-info">
-              <div><span class="project-number">01</span><span class="status">Deployment soon</span></div>
-              <h3><a href="https://github.com/SanketK8705" target="_blank" rel="noreferrer" class="project-title-link">FIFA Player Transfer<br />Value Predictor ↗</a></h3>
-              <p>A full-stack ML web app using Linear Regression, Random Forest and Gradient Boosting to predict player market value. Features PCA for dimensionality reduction and an interactive dashboard with eight dynamic visualizations.</p>
-              <ul class="tags"><li>Python</li><li>Flask</li><li>Scikit-learn</li><li>PCA</li></ul>
+              <div><span class="project-number">01</span><span class="status">Live Now</span></div>
+              <h3><a href="https://fifa-transfer-predictor-frontend.vercel.app/" target="_blank" rel="noreferrer" class="project-title-link">FIFAVal – ML Player Valuation Platform ↗</a></h3>
+              <p>ML-powered player valuation platform trained on 18,000+ FIFA records (Gradient Boosting Regressor, 99.17% R²) with a hybrid RAG scouting assistant powered by Gemini API and PCA-based analytics.</p>
+              <ul class="tags">
+                <li>React.js (Vite)</li>
+                <li>Flask</li>
+                <li>Scikit-learn</li>
+                <li>Pandas</li>
+                <li>NumPy</li>
+                <li>SQLAlchemy (SQLite)</li>
+                <li>Recharts</li>
+                <li>GSAP</li>
+                <li>Gemini API</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://github.com/SanketK8705/Fifa-transfer-predictor" target="_blank" rel="noreferrer" class="project-link-btn">Code ↗</a>
+                <a href="https://fifa-transfer-predictor-frontend.vercel.app/" target="_blank" rel="noreferrer" class="project-link-btn">Live Demo ↗</a>
+              </div>
             </div>
           </article>
 
@@ -151,20 +165,78 @@
               <h3><a href="https://github.com/SanketK8705" target="_blank" rel="noreferrer" class="project-title-link">LinuxWatch ↗</a></h3>
               <p>A real-time intrusion detection system with 16 custom security rules, JWT authentication, user-isolated alert channels via PostgreSQL and Socket.io, plus live attack analytics.</p>
               <ul class="tags"><li>React</li><li>Node.js</li><li>PostgreSQL</li><li>Socket.io</li></ul>
+              <div class="project-links">
+                <a href="https://github.com/SanketK8705" target="_blank" rel="noreferrer" class="project-link-btn">Code ↗</a>
+              </div>
             </div>
           </article>
 
           <article class="project-card reveal">
-            <div class="project-visual visual-aegis">
-              <div class="vault-rings"><div><div><span>AV</span></div></div></div>
-              <div class="encryption-line">ZERO KNOWLEDGE · AES · PRIVATE BY DESIGN</div>
-              <div class="vault-stat"><small>VAULT STATUS</small><strong>ENCRYPTED</strong></div>
+            <div class="project-visual visual-dailypool" aria-label="Abstract carpooling visualization for DailyPool">
+              <div class="map-grid">
+                <div class="map-path"></div>
+                <span class="map-dot d1"></span>
+                <span class="map-dot d2"></span>
+                <div class="route-pulse"></div>
+              </div>
+              <div class="ride-panel">
+                <small>ROUTE MATCHING (Groq)</small>
+                <strong>Bengaluru</strong>
+                <span class="ride-status">MATCHED 94%</span>
+              </div>
             </div>
             <div class="project-info">
-              <div><span class="project-number">03</span><span class="status">Deployment soon</span></div>
-              <h3><a href="https://github.com/SanketK8705" target="_blank" rel="noreferrer" class="project-title-link">Aegis Vault ↗</a></h3>
-              <p>A zero-knowledge password manager with encrypted vault storage, secure credential workflows, password generation and breach detection—built with a responsive full-stack architecture.</p>
-              <ul class="tags"><li>React</li><li>Flask</li><li>PostgreSQL</li><li>Docker</li></ul>
+              <div><span class="project-number">03</span><span class="status">Live Now</span></div>
+              <h3><a href="https://daily-pool-client.vercel.app/login" target="_blank" rel="noreferrer" class="project-title-link">DailyPool ↗</a></h3>
+              <p>Full-stack carpooling platform for Bengaluru commuters with AI-driven route matching via Groq, real-time ride tracking over Socket.io, and one-tap UPI fare-split payments.</p>
+              <ul class="tags">
+                <li>React.js (Vite)</li>
+                <li>Tailwind CSS</li>
+                <li>Node.js</li>
+                <li>Express.js</li>
+                <li>MongoDB</li>
+                <li>Socket.io</li>
+                <li>Google Maps API</li>
+                <li>Groq AI</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://github.com/SanketK8705/DailyPool" target="_blank" rel="noreferrer" class="project-link-btn">Code ↗</a>
+                <a href="https://daily-pool-client.vercel.app/login" target="_blank" rel="noreferrer" class="project-link-btn">Live Demo ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-visual visual-ratelimiter" aria-label="Rate Limiter sliding window visualization">
+              <div class="bucket-container">
+                <div class="token t1"></div>
+                <div class="token t2"></div>
+                <div class="token t3"></div>
+                <div class="bucket-ring"></div>
+              </div>
+              <div class="limiter-stat">
+                <small>REDIS LUA ENGINE</small>
+                <strong>500+ <span class="unit">REQ/S</span></strong>
+                <span class="latency-badge">p99: 5ms</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <div><span class="project-number">04</span><span class="status">Live Now</span></div>
+              <h3><a href="https://rate-limiter-service-n1dk.onrender.com/" target="_blank" rel="noreferrer" class="project-title-link">Rate Limiter Microservice ↗</a></h3>
+              <p>Stateless rate-limiting microservice (Token Bucket + Sliding Window) using atomic Redis Lua scripts to eliminate race conditions — load-tested at 500+ req/sec with 0% errors and p99 latency of 5ms.</p>
+              <ul class="tags">
+                <li>Node.js</li>
+                <li>Express.js</li>
+                <li>Redis</li>
+                <li>Lua</li>
+                <li>Socket.io</li>
+                <li>React (Vite)</li>
+                <li>Artillery</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://github.com/SanketK8705/Rate-limiter" target="_blank" rel="noreferrer" class="project-link-btn">Code ↗</a>
+                <a href="https://rate-limiter-service-n1dk.onrender.com/" target="_blank" rel="noreferrer" class="project-link-btn">Live Demo ↗</a>
+              </div>
             </div>
           </article>
         </div>
