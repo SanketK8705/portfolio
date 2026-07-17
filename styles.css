@@ -520,3 +520,185 @@ footer p:last-child { justify-self: end; }
 .theme-btn.active::after {
   border-color: var(--btn-color);
 }
+
+/* Currently status in About section */
+.currently-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  font: 400 10px/1 "DM Mono", monospace;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+.currently-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px rgba(var(--accent-rgb), 0.15);
+  display: inline-block;
+  animation: currently-pulse 2s infinite;
+}
+@keyframes currently-pulse {
+  50% { box-shadow: 0 0 0 8px rgba(var(--accent-rgb), 0); }
+}
+
+/* Overlapping routes and labels for DailyPool */
+.map-path.p1 {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  width: 60%;
+  height: 40%;
+  border-left: 2px dashed rgba(var(--accent-rgb), 0.25);
+  border-bottom: 2px dashed rgba(var(--accent-rgb), 0.25);
+}
+.map-path.p2 {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  width: 60%;
+  height: 40%;
+  border-top: 1px dashed rgba(140, 108, 255, 0.15);
+  border-right: 1px dashed rgba(140, 108, 255, 0.15);
+}
+.map-path.p3 {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  width: 60%;
+  height: 40%;
+  border-bottom: 1.5px dashed rgba(var(--accent-rgb), 0.15);
+  border-right: 1.5px dashed rgba(var(--accent-rgb), 0.15);
+}
+.map-label {
+  position: absolute;
+  font: 400 7px/1 "DM Mono", monospace;
+  color: var(--muted);
+  text-transform: uppercase;
+  white-space: nowrap;
+  letter-spacing: .02em;
+}
+.map-dot.d1 .map-label {
+  bottom: 10px;
+  left: -15px;
+}
+.map-dot.d2 .map-label {
+  top: 10px;
+  right: -10px;
+}
+
+/* Rate Limiter request stream and chips */
+.req-stream {
+  position: absolute;
+  top: -15px;
+  height: 15px;
+  width: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+.req-stream span {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 8px var(--accent);
+  animation: flow-down 2s infinite linear;
+}
+.req-stream span:nth-child(1) { animation-delay: 0s; }
+.req-stream span:nth-child(2) { animation-delay: 0.6s; }
+.req-stream span:nth-child(3) { animation-delay: 1.2s; }
+@keyframes flow-down {
+  0% { transform: translateY(0); opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { transform: translateY(140px); opacity: 0; }
+}
+.limiter-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+.latency-badge.err {
+  color: #ff3366;
+  border-color: rgba(255, 51, 102, 0.3);
+}
+.latency-badge.test {
+  color: var(--muted);
+}
+
+/* Portfolio Card Visuals */
+.visual-portfolio {
+  background: radial-gradient(circle at 50% 50%, rgba(var(--accent-rgb), 0.08), transparent 45%), linear-gradient(135deg, #101215, #08090a);
+  position: relative;
+}
+.code-editor-grid {
+  position: absolute;
+  inset: 28px;
+  border: 1px solid var(--line);
+  background: rgba(16, 18, 18, 0.9);
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.editor-header {
+  height: 32px;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.01);
+}
+.editor-header span {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+}
+.editor-header span:nth-child(1) { background: #ff5f56; }
+.editor-header span:nth-child(2) { background: #ffbd2e; }
+.editor-header span:nth-child(3) { background: #27c93f; }
+.editor-header b {
+  margin-left: 10px;
+  color: #5c625f;
+  font: 400 8px/1 "DM Mono", monospace;
+}
+.editor-lines {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+.editor-lines code {
+  font: 400 9px/1.2 "DM Mono", monospace;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.editor-lines code:nth-child(odd) {
+  color: #8c6cff;
+}
+.editor-lines code:nth-child(3) {
+  color: var(--accent);
+}
+.shader-wave {
+  position: absolute;
+  right: -20px;
+  bottom: -20px;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(var(--accent-rgb), 0.15), transparent 60%);
+  filter: blur(10px);
+  animation: pulse-wave 4s infinite ease-in-out;
+}
+@keyframes pulse-wave {
+  0%, 100% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.3); opacity: 0.9; }
+}

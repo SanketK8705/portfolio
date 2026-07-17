@@ -174,9 +174,11 @@
           <article class="project-card reveal">
             <div class="project-visual visual-dailypool" aria-label="Abstract carpooling visualization for DailyPool">
               <div class="map-grid">
-                <div class="map-path"></div>
-                <span class="map-dot d1"></span>
-                <span class="map-dot d2"></span>
+                <div class="map-path p1"></div>
+                <div class="map-path p2"></div>
+                <div class="map-path p3"></div>
+                <span class="map-dot d1"><small class="map-label">Driver</small></span>
+                <span class="map-dot d2"><small class="map-label">Rider</small></span>
                 <div class="route-pulse"></div>
               </div>
               <div class="ride-panel">
@@ -209,6 +211,7 @@
           <article class="project-card reveal">
             <div class="project-visual visual-ratelimiter" aria-label="Rate Limiter sliding window visualization">
               <div class="bucket-container">
+                <div class="req-stream"><span></span><span></span><span></span></div>
                 <div class="token t1"></div>
                 <div class="token t2"></div>
                 <div class="token t3"></div>
@@ -217,7 +220,11 @@
               <div class="limiter-stat">
                 <small>REDIS LUA ENGINE</small>
                 <strong>500+ <span class="unit">REQ/S</span></strong>
-                <span class="latency-badge">p99: 5ms</span>
+                <div class="limiter-chips">
+                  <span class="latency-badge">p99: 5ms</span>
+                  <span class="latency-badge err">0% error</span>
+                  <span class="latency-badge test">8.9k tested</span>
+                </div>
               </div>
             </div>
             <div class="project-info">
@@ -236,6 +243,37 @@
               <div class="project-links">
                 <a href="https://github.com/SanketK8705/Rate-limiter" target="_blank" rel="noreferrer" class="project-link-btn">Code ↗</a>
                 <a href="https://rate-limiter-service-n1dk.onrender.com/" target="_blank" rel="noreferrer" class="project-link-btn">Live Demo ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-visual visual-portfolio" aria-label="Abstract code grid visualization for Portfolio Website">
+              <div class="code-editor-grid">
+                <div class="editor-header"><span></span><span></span><span></span><b>portfolio://main.glsl</b></div>
+                <div class="editor-lines">
+                  <code>uniform float u_time;</code>
+                  <code>void main() {</code>
+                  <code>  vec2 uv = gl_FragCoord.xy/u_resolution;</code>
+                  <code>  gl_FragColor = vec4(uv.x, uv.y, 0.8, 1.0);</code>
+                  <code>}</code>
+                </div>
+                <div class="shader-wave"></div>
+              </div>
+            </div>
+            <div class="project-info">
+              <div><span class="project-number">05</span><span class="status">Live Now</span></div>
+              <h3><a href="https://sanketkumar.vercel.app/" target="_blank" rel="noreferrer" class="project-title-link">Portfolio Website ↗</a></h3>
+              <p>Personal portfolio built with React (Vite), custom WebGL shader hero section, dark minimalist design system, and animated data-driven sections (capabilities, LeetCode stats, project showcase).</p>
+              <ul class="tags">
+                <li>React.js (Vite)</li>
+                <li>Tailwind CSS</li>
+                <li>WebGL/Shaders</li>
+                <li>Framer Motion</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://github.com/SanketK8705/portfolio" target="_blank" rel="noreferrer" class="project-link-btn">Code ↗</a>
+                <a href="https://sanketkumar.vercel.app/" target="_blank" rel="noreferrer" class="project-link-btn">Live Demo ↗</a>
               </div>
             </div>
           </article>
@@ -285,6 +323,9 @@
         <div class="about-photo reveal">
           <img src="assets/sanket-kumar-singh.webp" alt="Sanket Kumar Singh" />
           <div class="photo-caption"><span>SANKET / 2027</span><span>BENGALURU, IN</span></div>
+          <div class="currently-status">
+            <span class="currently-dot"></span> Currently: Final-year @ CMRIT &middot; Open to SWE roles
+          </div>
         </div>
         <div class="about-copy">
           <span class="eyebrow reveal">06 / About me</span>
