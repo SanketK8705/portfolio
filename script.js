@@ -56,6 +56,86 @@ window.addEventListener('pointermove', (event) => {
 
 document.querySelector('#year').textContent = new Date().getFullYear();
 
+const leetcodeStatNodes = document.querySelectorAll('[data-leetcode-stat]');
+
+function getLeetCodeCalendar(stats) {
+  const calendar = stats?.submissionCalendar ?? stats?.calendar ?? stats?.matchedUser?.submissionCalendar;
+  if (!calendar) return null;
+  if (typeof calendar === 'string') {
+    try {
+      return JSON.parse(calendar);
+    } catch {
+      return null;
+    }
+  }
+  return calendar;
+}
+
+function getActiveDays(stats) {
+  if (Number.isFinite(Number(stats?.activeDays))) return Number(stats.activeDays);
+  const calendar = getLeetCodeCalendar(stats);
+  if (!calendar || typeof calendar !== 'object') return null;
+  return Object.values(calendar).filter((count) => Number(count) > 0).length;
+}
+
+function getMaxStreak(stats) {
+  if (Number.isFinite(Number(stats?.maxStreak))) return Number(stats.maxStreak);
+  const calendar = getLeetCodeCalendar(stats);
+  if (!calendar || typeof calendar !== 'object') return null;
+
+  const activeDays = Object.entries(calendar)
+    .filter(([, count]) => Number(count) > 0)
+    .map(([timestamp]) => Math.floor(Number(timestamp) / 86400))
+    .filter(Number.isFinite)
+    .sort((a, b) => a - b);
+
+  let longest = 0;
+  let current = 0;
+  let previous = null;
+
+  activeDays.forEach((day) => {
+    current = previous === null || day === previous + 1 ? current + 1 : 1;
+    longest = Math.max(longest, current);
+    previous = day;
+  });
+
+  return longest || null;
+}
+
+function normalizeLeetCodeStats(stats) {
+  return {
+    totalSolved: stats?.totalSolved,
+    easySolved: stats?.easySolved,
+    mediumSolved: stats?.mediumSolved,
+    hardSolved: stats?.hardSolved,
+    activeDays: getActiveDays(stats),
+    maxStreak: getMaxStreak(stats),
+  };
+}
+
+async function syncLeetCodeStats() {
+  if (!leetcodeStatNodes.length) return;
+
+  try {
+    const response = await fetch('assets/leetcode-stats.json', { cache: 'no-store' });
+    if (!response.ok) return;
+
+    const stats = normalizeLeetCodeStats(await response.json());
+
+    leetcodeStatNodes.forEach((node) => {
+      const key = node.getAttribute('data-leetcode-stat');
+      const value = Number(stats[key]);
+      if (Number.isFinite(value)) {
+        node.textContent = value.toLocaleString('en-IN');
+      }
+    });
+  } catch (error) {
+    console.warn('LeetCode stats could not be loaded; using embedded fallback values.', error);
+  }
+}
+
+syncLeetCodeStats();
+
 // Theme Accent Switcher Logic
 const themeButtons = document.querySelectorAll('.theme-btn');
 const activeTheme = localStorage.getItem('selected-theme') || 'default';
