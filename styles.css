@@ -199,6 +199,8 @@ a.status::before { background: var(--accent); box-shadow: 0 0 8px rgba(var(--acc
 .about-photo::before { content: ""; position: absolute; z-index: -1; top: -18px; left: -18px; width: 72%; height: 52%; border-top: 1px solid rgba(var(--accent-rgb),.35); border-left: 1px solid rgba(var(--accent-rgb),.35); }
 .about-photo img { display: block; width: 100%; aspect-ratio: .78; object-fit: cover; object-position: center 38%; filter: saturate(.65) contrast(1.04); border-radius: 3px; }
 .photo-caption { display: flex; justify-content: space-between; padding-top: 11px; color: #6c716c; font: 400 8px/1 "DM Mono", monospace; letter-spacing: .12em; }
+.photo-status { display: flex; align-items: center; gap: 8px; margin: 18px 0 0; color: var(--muted); font: 400 10px/1.55 "DM Mono", monospace; text-transform: uppercase; letter-spacing: .08em; }
+.photo-status span { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 5px rgba(var(--accent-rgb),.08); animation: pulse 2s infinite; flex-shrink: 0; }
 .about-copy .lead { margin: 48px 0 20px; color: var(--text); font-size: 18px; line-height: 1.65; letter-spacing: -.02em; }
 .about-copy > p:not(.lead) { color: var(--muted); font-size: 14px; line-height: 1.8; }
 .education-heading { margin: 36px 0 16px; color: var(--text); font-size: 13px; font-weight: 500; letter-spacing: -.02em; }
