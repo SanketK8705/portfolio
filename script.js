@@ -1,4 +1,3 @@
-import leetcodeData from './src/data/leetcode-stats.json' assert { type: 'json' };
 
 const menuButton = document.querySelector('.menu-button');
 const mobileMenu = document.querySelector('.mobile-menu');
