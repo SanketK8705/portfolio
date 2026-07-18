@@ -28,8 +28,8 @@
     "acSubmissionNum": [
       {
         "difficulty": "All",
-        "count": 166,
-        "submissions": 288
+        "count": 167,
+        "submissions": 289
       },
       {
         "difficulty": "Easy",
@@ -38,8 +38,8 @@
       },
       {
         "difficulty": "Medium",
-        "count": 80,
-        "submissions": 125
+        "count": 81,
+        "submissions": 126
       },
       {
         "difficulty": "Hard",
@@ -50,8 +50,8 @@
     "totalSubmissionNum": [
       {
         "difficulty": "All",
-        "count": 167,
-        "submissions": 334
+        "count": 168,
+        "submissions": 335
       },
       {
         "difficulty": "Easy",
@@ -60,8 +60,8 @@
       },
       {
         "difficulty": "Medium",
-        "count": 81,
-        "submissions": 148
+        "count": 82,
+        "submissions": 149
       },
       {
         "difficulty": "Hard",
@@ -203,7 +203,7 @@
     "1784073600": 9,
     "1784160000": 1,
     "1784246400": 1,
-    "1784332800": 6,
+    "1784332800": 7,
     "1757462400": 2,
     "1758067200": 2,
     "1759536000": 4,
