@@ -104,12 +104,12 @@ function getMaxStreak(stats) {
 
 function normalizeLeetCodeStats(stats) {
   return {
-    totalSolved: stats?.totalSolved,
+    totalSolved: stats?.solvedProblem,
     easySolved: stats?.easySolved,
     mediumSolved: stats?.mediumSolved,
     hardSolved: stats?.hardSolved,
-    activeDays: getActiveDays(stats),
-    maxStreak: getMaxStreak(stats),
+    activeDays: Number.isFinite(Number(stats?.totalActiveDays)) ? Number(stats.totalActiveDays) : getActiveDays(stats),
+    maxStreak: Number.isFinite(Number(stats?.streak)) ? Number(stats.streak) : getMaxStreak(stats),
   };
 }
 
@@ -124,11 +124,12 @@ async function syncLeetCodeStats() {
 
     leetcodeStatNodes.forEach((node) => {
       const key = node.getAttribute('data-leetcode-stat');
+      if (stats[key] === null || stats[key] === undefined) return;
       const value = Number(stats[key]);
       if (Number.isFinite(value)) {
         node.textContent = value.toLocaleString('en-IN');
-      }
-    });
+  }
+});
   } catch (error) {
     console.warn('LeetCode stats could not be loaded; using embedded fallback values.', error);
   }

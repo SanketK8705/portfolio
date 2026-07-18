@@ -18,7 +18,9 @@ jobs:
 
       - name: Fetch LeetCode stats
         run: |
-          curl -fsSL "https://leetcode-stats-api.herokuapp.com/SanketK8705" -o /tmp/leetcode-stats.json
+          curl -fsSL "https://alfa-leetcode-api.onrender.com/sanket_kumar_singh/solved" -o /tmp/solved.json
+          curl -fsSL "https://alfa-leetcode-api.onrender.com/sanket_kumar_singh/calendar" -o /tmp/calendar.json
+          jq -s '.[0] * .[1]' /tmp/solved.json /tmp/calendar.json > /tmp/leetcode-stats.json
           jq empty /tmp/leetcode-stats.json
           mkdir -p assets
           mv /tmp/leetcode-stats.json assets/leetcode-stats.json
