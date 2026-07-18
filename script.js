@@ -104,11 +104,13 @@ function getMaxStreak(stats) {
 }
 
 function normalizeLeetCodeStats(stats) {
+  const acStats = stats?.submitStats?.acSubmissionNum ?? [];
+  const findCount = (difficulty) => acStats.find((s) => s.difficulty === difficulty)?.count;
   return {
-    totalSolved: stats?.solvedProblem,
-    easySolved: stats?.easySolved,
-    mediumSolved: stats?.mediumSolved,
-    hardSolved: stats?.hardSolved,
+    totalSolved: findCount('All'),
+    easySolved: findCount('Easy'),
+    mediumSolved: findCount('Medium'),
+    hardSolved: findCount('Hard'),
     activeDays: Number.isFinite(Number(stats?.totalActiveDays)) ? Number(stats.totalActiveDays) : getActiveDays(stats),
     maxStreak: Number.isFinite(Number(stats?.streak)) ? Number(stats.streak) : getMaxStreak(stats),
   };
