@@ -28,18 +28,18 @@
     "acSubmissionNum": [
       {
         "difficulty": "All",
-        "count": 167,
-        "submissions": 289
+        "count": 169,
+        "submissions": 293
       },
       {
         "difficulty": "Easy",
-        "count": 77,
-        "submissions": 145
+        "count": 78,
+        "submissions": 146
       },
       {
         "difficulty": "Medium",
-        "count": 81,
-        "submissions": 126
+        "count": 82,
+        "submissions": 129
       },
       {
         "difficulty": "Hard",
@@ -50,18 +50,18 @@
     "totalSubmissionNum": [
       {
         "difficulty": "All",
-        "count": 168,
-        "submissions": 335
+        "count": 170,
+        "submissions": 339
       },
       {
         "difficulty": "Easy",
-        "count": 77,
-        "submissions": 165
+        "count": 78,
+        "submissions": 166
       },
       {
         "difficulty": "Medium",
-        "count": 82,
-        "submissions": 149
+        "count": 83,
+        "submissions": 152
       },
       {
         "difficulty": "Hard",
@@ -76,7 +76,7 @@
     2026
   ],
   "streak": 38,
-  "totalActiveDays": 130,
+  "totalActiveDays": 131,
   "dccBadges": [],
   "submissionCalendar": {
     "1768780800": 2,
@@ -203,7 +203,8 @@
     "1784073600": 9,
     "1784160000": 1,
     "1784246400": 1,
-    "1784332800": 7,
+    "1784332800": 8,
+    "1784419200": 3,
     "1757462400": 2,
     "1758067200": 2,
     "1759536000": 4,
