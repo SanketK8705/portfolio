@@ -22,7 +22,7 @@
     "postViewCount": 0.0,
     "postViewCountDiff": 0,
     "reputation": 0,
-    "ranking": 780172,
+    "ranking": 776350,
     "reputationDiff": 0,
     "solutionCount": 0,
     "solutionCountDiff": 0,
@@ -34,13 +34,13 @@
     "acSubmissionNum": [
       {
         "difficulty": "All",
-        "count": 219,
-        "submissions": 404
+        "count": 220,
+        "submissions": 405
       },
       {
         "difficulty": "Easy",
-        "count": 101,
-        "submissions": 190
+        "count": 102,
+        "submissions": 191
       },
       {
         "difficulty": "Medium",
@@ -56,13 +56,13 @@
     "totalSubmissionNum": [
       {
         "difficulty": "All",
-        "count": 221,
-        "submissions": 482
+        "count": 222,
+        "submissions": 483
       },
       {
         "difficulty": "Easy",
-        "count": 101,
-        "submissions": 224
+        "count": 102,
+        "submissions": 225
       },
       {
         "difficulty": "Medium",
@@ -82,7 +82,7 @@
     2026
   ],
   "streak": 66,
-  "totalActiveDays": 202,
+  "totalActiveDays": 203,
   "dccBadges": [],
   "submissionCalendar": {
     "1768780800": 2,
@@ -286,6 +286,7 @@
     "1791158400": 3,
     "1791244800": 1,
     "1791331200": 1,
+    "1791417600": 1,
     "1762992000": 2
   }
 }
